@@ -18,8 +18,8 @@
 
 		if(isset($tk) && isset($mk)){
 			$sql = "SELECT * FROM thanhvien WHERE tai_khoan='$tk' AND mat_khau = '$mk'";
-			$query = mysql_query($sql);
-			$rows = mysql_num_rows($query);
+			$query = mysqli_query($conn, $sql);
+			$rows = mysqli_num_rows($query);
 			if($rows<=0){
 				$error = 'Tài khoản hoặc mật khẩu chưa đúng';
 			}else{

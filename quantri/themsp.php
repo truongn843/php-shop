@@ -81,7 +81,7 @@
 
             move_uploaded_file($tmp, 'anh/'.$anh_sp);
             $sql = "INSERT INTO sanpham (ten_sp,gia_sp,bao_hanh,phu_kien,tinh_trang,khuyen_mai,trang_thai,chi_tiet_sp,anh_sp,id_dm,dac_biet) VALUES ('$ten_sp','$gia_sp','$bao_hanh','$phu_kien','$tinh_trang','$khuyen_mai','$trang_thai','$chi_tiet_sp','$anh_sp','$id_dm','$dac_biet')";
-            $query = mysql_query($sql);
+            $query = mysqli_query($conn, $sql);
             header('location:quantri.php?page_layout=danhsachsp');
         }
     }

@@ -4,7 +4,7 @@
 	$dbPassword = '';
 
 	$conn = mysqli_connect($dbHost,$dbUsername,$dbPassword);
-	$dbSelect = mysqli_select_db('vietproshop',$conn);
-	$setLang = mysqli_query("SET NAMES 'utf8'");
+	$dbSelect = mysqli_select_db($conn,'vietproshop');
+	$setLang = mysqli_query($conn, "SET NAMES 'utf8'");
 
 ?>

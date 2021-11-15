@@ -2,8 +2,8 @@
     include_once('ketnoi.php');
     $id_sp = $_GET['id_sp'];
     $sql = "SELECT * FROM sanpham WHERE id_sp = $id_sp";
-    $query = mysql_query($sql);
-    while ($arr = mysql_fetch_array($query)) {
+    $query = mysqli_query($conn, $sql);
+    while ($arr = mysqli_fetch_array($query)) {
 ?>
 <link rel="stylesheet" type="text/css" href="css/themsp.css" />
 <h2>sửa thông tin sản phẩm</h2>
@@ -21,8 +21,8 @@
             	<select name="id_dm">
                     <?php
                         $sqlDm = "SELECT * FROM dmsanpham";
-                        $queryDm = mysql_query($sqlDm);
-                        while ($arrDm = mysql_fetch_array($queryDm)) {
+                        $queryDm = mysqli_query($conn, $sqlDm);
+                        while ($arrDm = mysqli_fetch_array($queryDm)) {
                             echo "<option value=1>".$arrDm['ten_dm']." </option>";
                         }
                     ?>
@@ -149,7 +149,7 @@
                                             dac_biet ='$dac_biet',
                                             chi_tiet_sp = '$chi_tiet_sp'
                                     WHERE   id_sp = $id_sp";
-            $queryUpdate = mysql_query($sqlUpdate);
+            $queryUpdate = mysqli_query($conn, $sqlUpdate);
             header('location:quantri.php?page_layout=danhsachsp');
         }
     }

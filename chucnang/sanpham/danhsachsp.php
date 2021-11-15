@@ -6,6 +6,7 @@
     ?></h2>
     <div class="pr-list">
     <?php
+        include_once('./cauhinh/ketnoi.php');
         $id_dm = $_GET['id_dm'];
         //Số bản ghi trên trang
         $rowPerPage = 3;
@@ -18,9 +19,9 @@
         //Vị trí
         $perRow = $page*$rowPerPage-$rowPerPage;
         $sql = "SELECT * FROM sanpham WHERE id_dm = $id_dm LIMIT $perRow,$rowPerPage";
-        $query = mysql_query($sql);
+        $query = mysqli_query($conn, $sql);
         //Tổng số bản ghi
-        $totalRow = mysql_num_rows(mysql_query("SELECT * FROM sanpham WHERE id_dm = $id_dm"));
+        $totalRow = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM sanpham WHERE id_dm = $id_dm"));
         //Tổng số trang
         $totalPage = Ceil($totalRow/$rowPerPage);
         $listPage = '';
@@ -46,7 +47,7 @@
            
         }
         $i=0;
-        while($row = mysql_fetch_array($query)){
+        while($row = mysqli_fetch_array($query)){
     ?>
     	<div class="prd-item">
         	 <a href="index.php?page_layout=chitietsp&id_sp=<?php echo $row['id_sp'] ?>"><img width="80" height="144" src="quantri/anh/<?php echo $row['anh_sp'] ?>" /></a>

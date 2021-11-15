@@ -3,6 +3,7 @@
 	<h2>giỏ hàng của bạn</h2>
     <div class="cart">
     <?php
+    include_once('./cauhinh/ketnoi.php');
     if(isset($_SESSION['giohang'])){
         if(isset($_POST['sl'])){
             foreach ($_POST['sl'] as $id_sp => $sl) {
@@ -25,13 +26,13 @@
         $strID = implode(',', $arrId);
         if(isset($sl)){
         $sql = "SELECT * FROM sanpham WHERE id_sp IN ($strID)";
-        $query = mysql_query($sql);
+        $query = mysqli_query($conn, $sql);
         $totalPriceAll = 0;
        
     ?>
     <form method="post" id="giohang">
      <?php
-        while($row = mysql_fetch_array($query)){
+        while($row = mysqli_fetch_array($query)){
         $totalPrice = $_SESSION['giohang'][$row['id_sp']]*$row['gia_sp'];
     ?>
     	<table width="100%">

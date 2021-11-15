@@ -8,7 +8,7 @@
         $rowsPerPage = 10;
         $perRow = $page*$rowsPerPage-$rowsPerPage;
     $sql = "SELECT * FROM sanpham INNER JOIN dmsanpham ON sanpham.id_dm = dmsanpham.id_dm LIMIT $perRow, $rowsPerPage";
-    $query = mysql_query($sql);
+    $query = mysqli_query($conn, $sql);
 ?>
 <link rel="stylesheet" type="text/css" href="css/danhsachsp.css" />
 <h2>quản lý sản phẩm</h2>
@@ -25,7 +25,7 @@
             <td width="5%">Xóa</td>
         </tr>
         <?php
-            while($row = mysql_fetch_array($query)){
+            while($row = mysqli_fetch_array($query)){
         ?>
         <tr>
         	<td><span><?php echo $row['id_sp'];?></span></td>
@@ -41,7 +41,7 @@
         ?>
     </table>
     <?php
-       $totalRows = mysql_num_rows(mysql_query("SELECT * FROM sanpham"));
+       $totalRows = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM sanpham"));
        $totalPage = ceil($totalRows/$rowsPerPage);
        $listPage = '';
        for($i=1;$i<=$totalPage;$i++){

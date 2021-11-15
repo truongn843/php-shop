@@ -2,10 +2,11 @@
 <div class="prd-block">
     <div class="prd-only">
     <?php
+        include_once('./cauhinh/ketnoi.php');
         $id_sp = $_GET['id_sp'];
         $sql = "SELECT * FROM sanpham WHERE id_sp = $id_sp";
-        $query = mysql_query($sql);
-        $row = mysql_fetch_array($query);
+        $query = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_array($query);
     ?>
     	<div class="prd-img"><img width="50%" src="quantri/anh/<?php echo $row['anh_sp'] ?>" /></div>	
         <div class="prd-intro">
@@ -62,14 +63,14 @@
             date_default_timezone_set('Asia/SaiGon');
             $ngay_gio = date('Y-m-d H:i:s');
             $sql = "INSERT INTO blsanpham (id_sp,ten,dien_thoai,binh_luan,ngay_gio) VALUES ($id_sp,'$ten','$dien_thoai','$binh_luan','$ngay_gio')";
-            $query = mysql_query($sql);
+            $query = mysqli_query($conn, $sql);
         }
     ?>
     <div class="comment-list">
     <?php
         $sql = "SELECT * FROM blsanpham WHERE id_sp = $id_sp";
-        $query = mysql_query($sql);
-        while($row = mysql_fetch_array($query)){
+        $query = mysqli_query($conn, $sql);
+        while($row = mysqli_fetch_array($query)){
     ?>
     	<ul>
         	<li class="com-title"><?php echo $row['ten'] ?><br />

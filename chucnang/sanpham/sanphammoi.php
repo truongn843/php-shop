@@ -2,9 +2,10 @@
     <h2>sản phẩm mới về</h2>
     <div class="pr-list">
     <?php
+        include_once('./cauhinh/ketnoi.php');
         $sql = "SELECT * FROM sanpham ORDER BY id_sp DESC LIMIT 6";
-        $query = mysql_query($sql);
-        while($row = mysql_fetch_array($query)){
+        $query = mysqli_query($conn, $sql);
+        while($row = mysqli_fetch_array($query)){
     ?>
          <div class="prd-item">
             <a href="index.php?page_layout=chitietsp&id_sp=<?php echo $row['id_sp'] ?>"><img width="80" height="144" src="quantri/anh/<?php echo $row['anh_sp'] ?>" /></a>
