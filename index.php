@@ -54,27 +54,16 @@ $(function() {
 </head>
 <body>
 
-<!-- Wrapper -->
-<div id="wrapper">
 	<!-- Header -->
     <div id="header">
-    	<div id="search-bar">
-        	<!--Tìm kiếm-->
-            <?php
-                include_once('chucnang/timkiem/timkiem.php');
-            ?>
-            <!--Giỏ hàng-->
-            <?php
-                include_once('chucnang/giohang/giohangcuaban.php');
-            ?>
-        </div>
-        <div id="main-bar">
-        	<div id="logo"><a href="index.php"><img src="anh/logo.png" /></a></div>
-            <div id="banner"></div>
-        </div>
+        <?php
+            include_once('chucnang/thanhdieuhuong/thanhdieuhuong.php');
+            include_once('chucnang/header/header.php');
+        ?>
+        
         <div id="navbar">
         	<ul>
-            	<li id="menu-home"><a href="index.php">trang chủ</a></li>
+            	<li><a href="index.php">trang chủ</a></li>
                 <li><a href="index.php?page_layout=gioithieu">giới thiệu</a></li>
                 <li><a href="index.php?page_layout=dichvu">dịch vụ</a></li>
                 <li><a href="index.php?page_layout=lienhe">liên hệ</a></li>
@@ -150,8 +139,6 @@ $(function() {
         </div>
     </div>
     <!-- End Footer -->
-</div>
-<!-- End Wrapper -->
 
 </body>
 </html>
