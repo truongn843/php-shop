@@ -1,0 +1,85 @@
+#contact-bar {
+    text-align: center;
+    width: 100%;
+    background-color: #ececec;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+#header-logo {
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    width: 100px;
+    height: 100px;
+}
+#header-content {
+    height: 120px;
+    border-bottom: 1px solid lightgray;
+}
+#header-search input[type="submit"]{
+    padding: 5px;
+    position: absolute;
+    margin-top: 10px;
+    right: 5px;
+    width: 40px;
+    height: 40px;;
+	background-image: url(../../anh/search-icon.png);
+    background-size: 40px;
+    background-color: #f3f3f3;    
+    background-repeat: no-repeat;
+    border: 0;
+	}
+#header-search input[type="submit"]:hover {
+    cursor: pointer;
+    }
+
+#header-search input[type="text"]{
+    background-color: #f3f3f3;
+    margin: 10px;
+    padding: 3px 20px 3px 20px;
+    width:85%;
+    height:30px;
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:18px;
+    outline: none;
+    border: 0;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    }
+#header-search:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    }
+#header-search {
+    top: 60px;
+    background-color: #f3f3f3;
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#header-user{
+    margin-top: 32px;
+    margin-right: 20px;
+    float: right;
+    width: 55px;
+    height: 55px;
+}
+#header-shopping-bag{
+    margin-top: 35px;
+    margin-right: 10px;
+    float: right;
+    width: 45px;
+    height: 45px;
+}
+#header-num-items {
+    position: absolute;
+    top: 80px;
+    right: 101px;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
