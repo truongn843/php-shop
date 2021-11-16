@@ -147,9 +147,18 @@ li:after {
 	overflow:hidden;
 	width:1000px;
 	height:auto;
+	margin: 30px auto;
 	background:#FFF;
 	padding:20px 0px;
 	}
+
+#slide {
+	/* object-fit: cover; */
+	/* width: 50px;
+	height: 100px; */
+	margin: 30px auto;
+	background: white;
+}
 
 /*---------- Left Sidebar----------*/
 #l-col{
@@ -172,9 +181,9 @@ li:after {
 	font-family:Verdana, Geneva, sans-serif;
 	font-size:15px;
 	font-weight:bold;
-	color:#FFF;
+	color:#000;
 	text-transform:capitalize;
-	background:#3F3F3F;
+	background:#bbcaff;
 	padding-left:12px;
 	}
 
@@ -281,7 +290,7 @@ ul#hotline li span{
 #main{
 	width:740px;
 	height:auto;
-	margin-top:20px;
+	/* margin-top:20px; */
 	}
 
 .prd-block{
@@ -296,9 +305,9 @@ ul#hotline li span{
 	font-family:Verdana, Geneva, sans-serif;
 	font-size:15px;
 	font-weight:bold;
-	color:#FFF;
+	color:#000;
 	text-transform:capitalize;
-	background:#3F3F3F;
+	background:#bbcaff;
 	padding-left:12px;
 	margin-right:20px;
 	}
@@ -314,7 +323,7 @@ ul#hotline li span{
 	width:208px;
 	height:auto;
 	text-align:center;
-	border:1px solid #CCC;
+	/* border:1px solid #CCC; */
 	margin-right:15px;
 	margin-bottom:15px;
 	padding:10px;
@@ -371,17 +380,19 @@ ul#hotline li span{
 
 /*---------- Footer----------*/
 #footer{
-	width:1000px;
+	width:100%;
 	height:auto;
 	border-top:8px solid #C40000;
 	margin-top:35px;
+	margin-left: auto;
+    margin-right: auto;
 	}
 	
 #footer #footer-info{
-	width:1000px;
+	width:100%;
 	height:auto;
-	background:#000;
-	border-top:20px solid #3F3F3F;
+	background:#fafafa;
+	/* border-top:20px solid #ffffff; */
 	padding:20px 0px;
 	text-align:center;
 	}
@@ -397,11 +408,11 @@ ul#hotline li span{
 	}		
 
 #footer #footer-info p{
-	width:1000px;
+	width:100%;
 	height:auto;
 	font-family:Verdana, Geneva, sans-serif;
 	font-size:12px;
-	color:#FFF;
+	color:rgb(46, 2, 2);
 	padding:10px;
 	}
 

@@ -1,5 +1,5 @@
 <div class="prd-block">
-    <h2>sản phẩm đặc biệt</h2>
+    <h2>sản phẩm mới về</h2>
     <div class="pr-list">
     <?php
         include_once('./cauhinh/ketnoi.php');

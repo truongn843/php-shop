@@ -69,27 +69,34 @@ $(function() {
                 <li><a href="index.php?page_layout=lienhe">liên hệ</a></li>
             </ul>
         </div>
+        
     </div>
     <!-- End Header -->
+    <!-- Slide Show -->
+    <div id="slide">
+        <?php
+            include_once('chucnang/slideshow/slideshow.php');
+        ?>
+    </div>
     <!-- Body -->
     <div id="body">
     	<!-- Left Column -->
     	<div id="l-col">
         	<!--Tư vấn-->
             <?php
-                include_once('chucnang/tuvan/tuvan.php');
-            ?>
+            //    include_once('chucnang/tuvan/tuvan.php');
+            //?>
             <!--Danh mục-->
             <?php
                 include_once('chucnang/sanpham/danhmucsp.php');
             ?>
             <!--Quảng cáo-->
             <?php
-                include_once('chucnang/quangcao/quangcao.php');
+                // include_once('chucnang/quangcao/quangcao.php');
             ?>
             <!--Thống kê-->
             <?php
-                include_once('chucnang/thongke/thongke.php');
+                // include_once('chucnang/thongke/thongke.php');
             ?>
             <!-- <div class="l-sidebar"></div> -->
         </div>
@@ -99,7 +106,7 @@ $(function() {
         <div id="r-col">
         	<!--slideshow-->
             <?php
-                include_once('chucnang/slideshow/slideshow.php');
+             //   include_once('chucnang/slideshow/slideshow.php');
             ?>
             <div id="main">
             	<?php
@@ -126,16 +133,21 @@ $(function() {
         </div>
         <!-- End Right Column -->
     	    
-        <div id="brand"></div>
+        <!-- <div id="brand"></div> -->
     </div>
     <!-- End Body -->
     <!-- Footer -->
     <div id="footer">
     	<div id="footer-info">
-        	<h4>trung tâm tin học & công nghệ vietpro</h4>
+        	<!-- <h4>trung tâm tin học & công nghệ vietpro</h4>
             <p><span>Địa chỉ:</span> Tầng 5, Tòa nhà A4, Ngõ 120 Hoàng Quốc Việt - Cầu Giấy - Hà Nội | <span>Phone</span> (04) 3537 6697</p>
             <p><span>Trụ sở 2:</span> Số 25/178/71 Tây Sơn - Đống Đa - Hà Nội | <span>Hotline</span> 0968 511 155</p>
-            <p>Bản quyền thuộc Vietpro Education</p>
+            <p>Bản quyền thuộc Vietpro Education</p> -->
+            <p>Nhóm ABC</p>
+            <p>AAAAAAAAAAAAAAAAA</p>
+            <p>AAAAAAAAAAAAAAAAA</p>
+            <p>AAAAAAAAAAAAAAAAA</p>
+            <p>AAAAAAAAAAAAAAAAA</p>
         </div>
     </div>
     <!-- End Footer -->

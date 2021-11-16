@@ -1,5 +1,5 @@
 <div class="l-sidebar">
-	<h2>hãng điện thoại</h2>
+	<h2>danh mục sản phẩm</h2>
 	<ul id="main-menu">
     <?php
         include_once('./cauhinh/ketnoi.php');
